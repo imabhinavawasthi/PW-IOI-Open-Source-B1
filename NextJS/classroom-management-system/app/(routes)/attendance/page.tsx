@@ -5,19 +5,13 @@ import HeaderSection from '../../(components)/header-section';
 import Link from 'next/link';
 
 function AttendancePage() {
-    const [attendanceData, setAttendanceData] = React.useState({
-        name: '',
-        email: '',
-        rollno: '',
-        date: ''
-    });
-    useEffect(() => {
-        const storedData = localStorage.getItem('attendanceData');
+    const storedData = typeof window !== 'undefined' ? localStorage.getItem('attendanceData') : null;
+    const [attendanceData, setAttendanceData] = React.useState(() => {
         if (storedData) {
-            const parsedData = JSON.parse(storedData);
-            setAttendanceData(parsedData);
+            return JSON.parse(storedData);
         }
-    }, []);
+        return [];
+    });
     
     return (
         <>
@@ -38,7 +32,7 @@ function AttendancePage() {
                             <tbody>
                                 {
                                     attendanceData.length > 0 ? (
-                                        attendanceData.map((data: any, index: number) => (
+                                        attendanceData?.map((data: any, index: number) => (
                                             <tr key={index}>
                                                 <td className="border border-gray-300 px-4 py-2">{data.name}</td>
                                                 <td className="border border-gray-300 px-4 py-2">{data.email}</td>
