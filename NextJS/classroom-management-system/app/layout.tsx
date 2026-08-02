@@ -18,7 +18,9 @@ export default function RootLayout({
     >
       <body>
         <Navbar/>
-        {children}
+        <div className="container mx-5 mt-5">
+          {children}
+        </div>
       </body>
     </html>
   );
