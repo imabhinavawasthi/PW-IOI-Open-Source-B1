@@ -1,0 +1,116 @@
+/* [project]/app/globals.css [app-client] (css) */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: #f4f4f4;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+main {
+  max-width: 900px;
+  margin: 40px auto;
+  padding: 20px;
+}
+
+header {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+header h1 {
+  margin-bottom: 10px;
+}
+
+header p {
+  color: gray;
+}
+
+.task-card {
+  background: #fff;
+  border-radius: 12px;
+  margin-bottom: 20px;
+  padding: 20px;
+  box-shadow: 0 2px 10px #00000014;
+}
+
+.task-card h2 {
+  margin-bottom: 10px;
+}
+
+.task-card p {
+  margin: 8px 0;
+}
+
+.task-actions {
+  gap: 10px;
+  margin-top: 15px;
+  display: flex;
+}
+
+.task-actions button {
+  cursor: pointer;
+  padding: 8px 14px;
+}
+
+.task-form {
+  background: #fff;
+  border-radius: 12px;
+  margin-top: 40px;
+  padding: 25px;
+  box-shadow: 0 2px 10px #00000014;
+}
+
+.task-form h2 {
+  margin-bottom: 20px;
+}
+
+.form-group {
+  flex-direction: column;
+  margin-bottom: 18px;
+  display: flex;
+}
+
+.form-group label {
+  margin-bottom: 8px;
+  font-weight: bold;
+}
+
+.form-group input, .form-group textarea, .form-group select {
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  padding: 10px;
+  font-size: 16px;
+}
+
+.task-form button {
+  cursor: pointer;
+  border: none;
+  border-radius: 8px;
+  padding: 12px 20px;
+}
+
+.filter-buttons {
+  justify-content: center;
+  gap: 12px;
+  margin-bottom: 30px;
+  display: flex;
+}
+
+.filter-buttons button {
+  cursor: pointer;
+  border: none;
+  border-radius: 8px;
+  padding: 10px 20px;
+  font-size: 15px;
+  transition: all .2s;
+}
+
+.filter-buttons button:hover {
+  transform: translateY(-2px);
+}
+
+/*# sourceMappingURL=app_globals_0yg4wg8.css.map*/

@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": [],
+  "sections": [
+    {"offset": {"line": 4, "column": 0}, "map": {"version":3,"sources":["file:///Users/anushkaaa/projects/mine/react%20todo%20list/task-tracker/app/page.tsx"],"sourcesContent":["\"use client\";\n\nimport Header from '../components/Header';\n\nexport default function Home() {\n  return (\n    <main>\n      <h1>Task Tracker</h1>\n    </main>\n  );\n}"],"names":["Home"],"mappings":";;;;;AAAA;;AAIe,SAASA;IACtB,qBACE,8OAAC;kBACC,cAAA,8OAAC;sBAAG;;;;;;;;;;;AAGV"}},
+    {"offset": {"line": 30, "column": 0}, "map": {"version":3,"sources":["file:///Users/anushkaaa/projects/mine/react%20todo%20list/task-tracker/node_modules/next/src/server/route-modules/app-page/vendored/ssr/react-jsx-dev-runtime.ts"],"sourcesContent":["module.exports = (\n  require('../../module.compiled') as typeof import('../../module.compiled')\n).vendored['react-ssr']!.ReactJsxDevRuntime\n"],"names":["module","exports","require","vendored","ReactJsxDevRuntime"],"mappings":"AAAAA,OAAOC,OAAO,GACZC,QAAQ,4HACRC,QAAQ,CAAC,YAAY,CAAEC,kBAAkB","ignoreList":[0]}}]
+}
