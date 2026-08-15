@@ -44,9 +44,7 @@ export default function Navbar() {
 
                     <div className="flex items-center gap-4">
                         <div className="sm:flex sm:gap-4">
-                            <Button href="#" title="Login" />
-
-                            <Button href="#" title="Register" />
+                            <Button title="Profile" href="/profile"/>
                         </div>
 
                         <button className="block rounded-sm bg-gray-100 p-2.5 text-gray-600 transition hover:text-gray-600/75 md:hidden">

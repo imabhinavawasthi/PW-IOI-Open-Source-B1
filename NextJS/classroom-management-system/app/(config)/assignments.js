@@ -10,6 +10,12 @@ export const assignments = [
         "name": "Next JS Todo App",
         "description": "Build a simple Todo application using Next.js.",
         "instructions": "Use Next.js to create a Todo app with features like adding, deleting, and marking tasks as complete.",
+    },
+    {
+        "id": 3,
+        "name": "Portfolio. Building",
+        "description": "Build your portfolio.",
+        "instructions": "Use Next.js to create a Todo app with features like adding, deleting, and marking tasks as complete.",
     }
 ]
 
