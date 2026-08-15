@@ -5,42 +5,32 @@ import { useState } from "react";
 
 export default function Profile() {
 
-    const [name, setName] = useState("Abhinav")
-    const [address, setAddress] = useState("Bangalore")
-    const [introduction, setIntroduction] = useState("I am a Software Engineer")
+    const [profileData, setProfileData] = useState({
+        "name": "Abhinav",
+        "address": "Bangalore",
+        "introduction": "I am a Software Engineer"
+    })
+
+    function updateProfileData(title: string, value: string) {
+        setProfileData({
+            ...profileData,
+            [title]: value
+        })
+    }
 
     return (
         <>
             <div>
                 <ProfileCard
-                    name={name}
-                    address={address}
-                    introduction={introduction}
+                    name={profileData?.name}
+                    address={profileData?.address}
+                    introduction={profileData?.introduction}
                     github_url="https://test.com"
                     codechef_url="https://test.com"
                     website="https://test.com"
+                    profileData={profileData}
+                    updateProfileData={updateProfileData}
                 />
-                <form className="mt-5">
-                    <label>Update Details</label>
-                    <input
-                        onChange={(e)=>{
-                            setName(e.target.value)
-                        }}
-                        className="w-full p-2 border-2 border-amber-800" type="text" placeholder="update name"
-                        defaultValue={name} />
-                    <input
-                    onChange={(e)=>{
-                            setAddress(e.target.value)
-                        }}
-                        className="w-full p-2 border-2 border-amber-800" type="text" placeholder="update address"
-                        defaultValue={address} />
-                    <input
-                    onChange={(e)=>{
-                            setIntroduction(e.target.value)
-                        }}
-                        className="w-full p-2 border-2 border-amber-800" type="text" placeholder="update introduction"
-                        defaultValue={introduction} />
-                </form>
             </div>
         </>
     )

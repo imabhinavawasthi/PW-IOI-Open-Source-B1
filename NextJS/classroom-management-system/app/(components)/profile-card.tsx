@@ -1,24 +1,22 @@
 export default function ProfileCard({
-    name,
     codechef_url,
     github_url,
     website,
-    address,
-    introduction
+    profileData,
+    updateProfileData
 }: {
-    name: string,
     codechef_url: string,
     github_url: string,
     website: string,
-    address: string,
-    introduction: string,
+    profileData: object
+    updateProfileData: unknown
 }) {
     return (
         <>
             <article className="rounded-xl border border-gray-700 bg-gray-800 p-4">
                 <div className="flex items-center gap-4">
                     <div>
-                        <h3 className="text-lg font-medium text-white">{name}</h3>
+                        <h3 className="text-lg font-medium text-white">{profileData?.name}</h3>
 
                         <div className="flow-root">
                             <ul className="-m-1 flex flex-wrap">
@@ -47,7 +45,7 @@ export default function ProfileCard({
                             <strong className="font-medium text-white">Address</strong>
 
                             <p className="mt-1 text-xs font-medium text-gray-300">
-                                {address}
+                                {profileData?.address}
                             </p>
                         </a>
                     </li>
@@ -60,11 +58,33 @@ export default function ProfileCard({
                             <strong className="font-medium text-white">Introduction</strong>
 
                             <p className="mt-1 text-xs font-medium text-gray-300">
-                                {introduction}
+                                {profileData?.introduction}
                             </p>
                         </a>
                     </li>
                 </ul>
+
+                <form className="mt-5">
+                    <label className="text-white">Update Details</label>
+                    <input
+                        onChange={(e) => {
+                            updateProfileData("name", e.target.value)
+                        }}
+                        className="w-full text-white p-2 border-2 border-green-800" type="text" placeholder="update name"
+                        defaultValue={profileData?.name} />
+                    <input
+                    onChange={(e) => {
+                            updateProfileData("address", e.target.value)
+                        }}
+                        className="w-full text-white p-2 border-2 border-green-800" type="text" placeholder="update address"
+                        defaultValue={profileData?.address} />
+                    <input
+                    onChange={(e) => {
+                            updateProfileData("introduction", e.target.value)
+                        }}
+                        className="w-full text-white p-2 border-2 border-green-800" type="text" placeholder="update introduction"
+                        defaultValue={profileData?.introduction} />
+                </form>
             </article>
         </>
     )
