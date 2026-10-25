@@ -1,0 +1,435 @@
+# JavaScript Basics
+
+## What is JavaScript?
+
+JavaScript (JS) is a high-level, interpreted programming language used to make web pages interactive and dynamic.
+
+It allows you to:
+- Respond to user actions
+- Update webpage content
+- Validate forms
+- Create animations
+- Fetch data from servers
+- Build complete web applications
+
+JavaScript is one of the three core technologies of web development:
+
+- HTML → Structure
+- CSS → Styling
+- JavaScript → Functionality
+
+---
+
+# Ways to Add JavaScript
+
+## 1. Inline JavaScript
+
+```html
+<button onclick="alert('Hello!')">Click Me</button>
+```
+
+**Explanation:**
+- JavaScript is written directly inside an HTML element.
+- Suitable only for very small tasks.
+- Not recommended for large projects.
+
+---
+
+## 2. Internal JavaScript
+
+```html
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Internal JS</title>
+</head>
+<body>
+
+<h1>Hello JavaScript</h1>
+
+<script>
+    console.log("Welcome to JavaScript");
+</script>
+
+</body>
+</html>
+```
+
+**Explanation:**
+- JavaScript is written inside the `<script>` tag.
+- Usually placed before the closing `</body>` tag.
+
+---
+
+## 3. External JavaScript (Recommended)
+
+### HTML
+
+```html
+<!DOCTYPE html>
+<html>
+<head>
+    <title>External JS</title>
+</head>
+<body>
+
+<h1>JavaScript Basics</h1>
+
+<script src="script.js"></script>
+
+</body>
+</html>
+```
+
+### script.js
+
+```javascript
+console.log("Hello from External JavaScript");
+```
+
+**Explanation:**
+- JavaScript code is stored in a separate `.js` file.
+- Makes code reusable and easier to maintain.
+
+---
+
+# Comments
+
+Comments are ignored by JavaScript and are used to explain code.
+
+## Single-line Comment
+
+```javascript
+// This is a single-line comment
+console.log("Hello");
+```
+
+## Multi-line Comment
+
+```javascript
+/*
+This is
+a multi-line
+comment
+*/
+console.log("JavaScript");
+```
+
+---
+
+# Console
+
+The console is mainly used for testing and debugging JavaScript.
+
+```javascript
+console.log("Hello World");
+```
+
+Output:
+
+```
+Hello World
+```
+
+Other useful console methods:
+
+```javascript
+console.log("Normal message");
+console.warn("Warning message");
+console.error("Error message");
+console.table([
+    {name: "Harshit", age: 19},
+    {name: "Rahul", age: 20}
+]);
+```
+
+---
+
+# Variables
+
+Variables store data.
+
+There are three ways to declare variables:
+
+- var
+- let
+- const
+
+---
+
+## var
+
+```javascript
+var name = "Harshit";
+console.log(name);
+```
+
+Characteristics:
+- Can be redeclared.
+- Can be updated.
+- Function scoped.
+- Avoid using in modern JavaScript.
+
+Example:
+
+```javascript
+var city = "Delhi";
+var city = "Mumbai";
+
+console.log(city);
+```
+
+Output:
+
+```
+Mumbai
+```
+
+---
+
+## let
+
+```javascript
+let age = 19;
+console.log(age);
+```
+
+Characteristics:
+- Cannot be redeclared.
+- Can be updated.
+- Block scoped.
+- Preferred for changing values.
+
+Example:
+
+```javascript
+let score = 80;
+score = 90;
+
+console.log(score);
+```
+
+Output:
+
+```
+90
+```
+
+---
+
+## const
+
+```javascript
+const PI = 3.14159;
+console.log(PI);
+```
+
+Characteristics:
+- Cannot be redeclared.
+- Cannot be reassigned.
+- Block scoped.
+- Used for constant values.
+
+Example:
+
+```javascript
+const country = "India";
+
+// country = "USA"; ❌ Error
+```
+
+---
+
+# Data Types
+
+JavaScript has two categories of data types:
+
+## Primitive Data Types
+
+- String
+- Number
+- Boolean
+- Undefined
+- Null
+- BigInt
+- Symbol
+
+## Non-Primitive Data Types
+
+- Object
+- Array
+- Function
+
+---
+
+## String
+
+Stores text.
+
+```javascript
+let name = "Harshit";
+```
+
+---
+
+## Number
+
+Stores integers and decimal values.
+
+```javascript
+let age = 19;
+let price = 99.99;
+```
+
+---
+
+## Boolean
+
+Stores either true or false.
+
+```javascript
+let isStudent = true;
+```
+
+---
+
+## Undefined
+
+A variable declared but not assigned a value.
+
+```javascript
+let x;
+
+console.log(x);
+```
+
+Output:
+
+```
+undefined
+```
+
+---
+
+## Null
+
+Represents an intentional empty value.
+
+```javascript
+let user = null;
+```
+
+---
+
+## BigInt
+
+Used for very large integers.
+
+```javascript
+let big = 123456789012345678901234567890n;
+```
+
+---
+
+## Symbol
+
+Creates unique identifiers.
+
+```javascript
+let id = Symbol("id");
+```
+
+---
+
+# typeof Operator
+
+Used to check the data type of a variable.
+
+```javascript
+let name = "Harshit";
+
+console.log(typeof name);
+```
+
+Output:
+
+```
+string
+```
+
+More examples:
+
+```javascript
+typeof 100;
+typeof true;
+typeof null;
+typeof undefined;
+typeof {};
+typeof [];
+```
+
+Outputs:
+
+```
+number
+boolean
+object
+undefined
+object
+object
+```
+
+---
+
+# Naming Rules for Variables
+
+✅ Valid
+
+```javascript
+let firstName;
+let _age;
+let $price;
+let student1;
+```
+
+❌ Invalid
+
+```javascript
+let 1name;
+let first-name;
+let let;
+```
+
+---
+
+# Best Practices
+
+- Use `const` whenever the value should not change.
+- Use `let` when the value needs to change.
+- Avoid using `var`.
+- Use meaningful variable names.
+- Write comments only when necessary.
+- Keep JavaScript in external `.js` files for larger projects.
+
+---
+
+# Interview Questions
+
+1. What is JavaScript?
+2. What are the three ways to include JavaScript in HTML?
+3. What is the difference between `var`, `let`, and `const`?
+4. What are primitive and non-primitive data types?
+5. What is the `typeof` operator?
+6. What is the difference between `null` and `undefined`?
+7. Why is external JavaScript preferred?
+
+---
+
+# Summary
+
+- JavaScript adds interactivity to web pages.
+- It can be added using inline, internal, or external scripts.
+- Variables are declared using `var`, `let`, and `const`.
+- JavaScript supports multiple primitive and non-primitive data types.
+- `typeof` is used to identify the type of a value.
+- `let` and `const` are recommended over `var` in modern JavaScript.
