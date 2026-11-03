@@ -15,6 +15,7 @@
 11. Useful Regex Patterns
 12. Practice Examples
 13. Summary
+14. Conclusion
 
 ---
 
