@@ -15,7 +15,7 @@ interface FeaturedNotesProps {
 
 export function FeaturedNotes({ searchQuery = "", onAddToCart }: FeaturedNotesProps) {
   const [selectedCategory, setSelectedCategory] = useState<Category>("All");
-  consteviewNote, setPreviewNote] = useState<NoteItem | null>(null); [pr
+  const [previewNote, setPreviewNote] = useState<NoteItem | null>(null);
 
   // Compute counts per category for the filter pills
   const itemCounts = useMemo(() => {
